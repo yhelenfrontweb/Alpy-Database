@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpy Database</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="head">
+        <button class="menu-button">&#9776;</button>
+        <h1>ALPY DATABASE</h1>
+    </div>
+    <nav id="menu">
+        <input class="input-group" id="search-bar" type="text" data-bind="value: query, valueUpdate: 'keyup'" placeholder="Search" autocomplete="off">
+        <ul class="list-group" data-bind="foreach: searchedList()">
+            <li id="list"> <a href="#" class="list-group-item active" data-bind="text:name, click:$parent.list"></a> </li>
+        </ul>
+    </nav>
+    <div class="footer">
+   <a href="https://alpyvzw.wordpress.com/"> <h5>ALPY VZW</h5> </a>
+    <img src="img/Alpy-new-logo.png" alt="alpy">
+
+<p>
+Steppestede 4<br>
+9051 Sint-Denijs-Westrem<br>
+België<br>
+Telefoon<br>
++ 32 (0) 479 91 77 71 <br>op dinsdag van 9 tot 15 uur
+</p>
+
+ 
+
+
+<h6>Designed & implemented by <a href="https://gobcreative.com/">GOBcreative</a><p>&copy; 2016 ALPYVZW</p></h6>
+
+
+</div>
+    <div class="mapdiv" id="map"> </div>
+</div>
+
+
+<script src="js/lib/jquery-1.11.2.min.js"></script> 
+<script src="js/lib/knockout-3.3.0.js"></script> 
+<script src="js/main.js"></script> 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmtSQbN2hMg2klV9Klj6dfgkK7dfVZsYY&callback=initMap" onerror="googleError()">
+  </script>
+</body>
+</html>
